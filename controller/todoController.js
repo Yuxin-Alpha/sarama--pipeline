@@ -1,19 +1,15 @@
+const bodyParser = require('body-parser');
+let urlencodeParser = bodyParser.urlencoded({extended: false});
 let data = [
-  {item: "白天吃饭"},
-  {item: "晚上吃饭"},
-  {item: "白天睡觉"},
-  {item: "晚上睡觉"},
-  {item: "白天敲代码"},
-  {item: "晚上敲代码"},
-  {item: "美滋滋"}
+  
 ];
 module.exports = function (app) {
   app.get('/todo', (req, res) => {
-    res.render('todo', {todos: '123'});
+    res.render('todo', {todos: data});
   });
 
-  app.post('/todo', (req, res) => {
-    //coding
+  app.post('/todo', urlencodeParser, (req, res) => {
+    data.push(req.body);
   });
 
   app.delete('/todo', (req, res) => {
