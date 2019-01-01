@@ -2,6 +2,11 @@ package main
 import(
 	"fmt"
 )
+type Cat struct {
+	Name string // 默认是空串
+	Age int // 默认是0
+	Color string // 默认是空串
+} 
 func main() {
 	// 指针修改值
 	// var num int = 20
@@ -24,7 +29,9 @@ func main() {
 	// } else {
 	// 	fmt.Println("777")
 	// }
-	for i := 1; i <= 10; i++ {
-		fmt.Println("777")
-	}
+	var cat1 Cat
+	cat1.Name = "小白"
+	cat1.Age = 3
+	cat1.Color = "白色"
+	fmt.Println(cat1)
 }
