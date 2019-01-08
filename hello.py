@@ -1,1 +1,3 @@
-print(123);
+x = 123
+name = 'keyi'
+print(name, x);
