@@ -3,7 +3,12 @@ while True:
   print("You choosed Number:[%s]" %action_str)
 
   if action_str in [1, 2, 3]:
-    print("666")
+    if action_str == 1:
+      pass
+    elif action_str == 2:
+      pass
+    else:
+      pass
   elif action_str == 0:
     print("See you again")
     break
